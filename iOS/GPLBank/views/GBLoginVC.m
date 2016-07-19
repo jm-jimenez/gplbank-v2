@@ -38,7 +38,6 @@
     
     GBEmployee *newEmployee = [[GBEmployee alloc] initWithDni:self.tfDNI.text andName:self.tfName.text andSurname1:self.tfSurname1.text andSurname2:self.tfSurname2.text andPassword:self.tfPassword.text andIsJefe:self.switchJefe.on];
 
-    int pene = 10;
     [self.employeesController createEmployee:newEmployee completion:^(GBInfo *info) {
         if (info.success){
             NSLog(@"OOOLRAAIITT");
@@ -47,8 +46,23 @@
             NSLog(@"fail");
         }
     }];
-    pene = 11;
-  
+}
+
+- (IBAction)authenticateEmployee:(UIButton *)sender {
+    
+    GBEmployee *employee = [[GBEmployee alloc]init];
+    employee.dni = self.tfDNI.text;
+    employee.password = self.tfPassword.text;
+    
+    [self.employeesController authenticateEmployee:employee completion:^(GBInfo *info){
+        if (info.success){
+            NSLog(@"autentificado");
+            GBEmployee *currentEmployee = [[GBParser getInstance] employeeFromJson:(info.msg)];
+        }
+        else{
+            NSLog(@"%@", info.msg);
+        }
+    }];
 }
 
 @end

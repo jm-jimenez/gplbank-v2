@@ -10,11 +10,6 @@
 
 @implementation GBEmployeesController
 
--(GBInfo *) createEmployee: (GBEmployee*) newEmployee{
-    GBEmployeesDAO * dao = [[GBEmployeesDAO alloc] init];
-    return [dao createEmployee: newEmployee];
-}
-
 -(void) createEmployee: (GBEmployee*) newEmployee completion:(void(^) (GBInfo* info))block{
     GBEmployeesDAO * dao = [[GBEmployeesDAO alloc] init];
     [dao createEmployee:newEmployee completion:^(GBInfo *info) {
@@ -22,4 +17,10 @@
     }];
 }
 
+-(void)authenticateEmployee:(GBEmployee*)employee completion:(void (^)(GBInfo *info)) block{
+    GBEmployeesDAO * dao = [[GBEmployeesDAO alloc] init];
+    [dao authenticateEmployee:employee completion:^(GBInfo *info) {
+        block(info);
+    }];
+}
 @end

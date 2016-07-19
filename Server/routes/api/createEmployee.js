@@ -2,8 +2,6 @@ var keystone = require('keystone'),
 	Employee = keystone.list('Employee');
 
 exports = module.exports = function(req, res) {
-	
-	console.log("He llegado a /createEmployee");
 
 	var data = (req.method == 'POST') ? req.body : req.query;
 
@@ -40,7 +38,8 @@ exports = module.exports = function(req, res) {
 				insertEmployee(incomingEmployee);
 			}
 		}, function(err){
-			console.log(err)});
+			console.log(err)
+		});
 	};
 
 	if (data.length > 0){

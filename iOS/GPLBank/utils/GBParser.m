@@ -32,5 +32,21 @@ static GBParser* instance;
     return arrayTemp;
 }
 
+-(GBEmployee *) employeeFromJson:(NSString*) json{
+    NSData *data = [json dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *parsedData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    
+    GBEmployee *employee = [[GBEmployee alloc]init];
+    
+    employee.dni = [parsedData objectForKey:@"dni"];
+    employee.name = [parsedData objectForKey:@"name"];
+    employee.surname1 = [parsedData objectForKey:@"surname1"];
+    employee.surname2 = [parsedData objectForKey:@"surname2"];
+    employee.password = [parsedData objectForKey:@"password"];
+    employee.isJefe = [[parsedData objectForKey:@"isJefe"] boolValue];
+    
+    return employee;
+}
+
 
 @end

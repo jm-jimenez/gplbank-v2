@@ -13,7 +13,6 @@
 
 @interface GBEmployeesController : NSObject
 
--(GBInfo *) createEmployee: (GBEmployee*) newEmployee;
--(void) createEmployee: (GBEmployee*) newEmployee completion:(void(^) (GBInfo* info))block;
-
+-(void) createEmployee: (GBEmployee*) newEmployee completion:(void(^) (GBInfo *info))block;
+-(void)authenticateEmployee:(GBEmployee*)employee completion:(void (^)(GBInfo *info)) block;
 @end

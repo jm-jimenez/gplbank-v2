@@ -23,5 +23,6 @@
 @property (weak, nonatomic) IBOutlet UISwitch *switchJefe;
 
 - (IBAction)addNewEmployee:(UIButton *)sender;
+- (IBAction)authenticateEmployee:(UIButton *)sender;
 
 @end

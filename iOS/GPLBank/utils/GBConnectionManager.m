@@ -39,24 +39,6 @@ static GBConnectionManager *instance = nil;
     
     return request;
 }
--(NSDictionary *) callRequest: (NSString *) route
-              andContentArray: (NSMutableArray *) contentArray{
-    NSHTTPURLResponse *response;
-    NSError *error;
-    
-    NSData *data = [NSURLConnection sendSynchronousRequest:[self buildUrlRequest:route contenJSON:contentArray] returningResponse:&response error:&error];
-    
-    NSDictionary *jsonResponse;
-    
-    if ([response statusCode] != 200){
-        jsonResponse = nil;
-    }
-    else{
-        jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    }
-    
-    return jsonResponse;
-}
 
 -(void) callRequest: (NSString *) route
               andContentArray: (NSMutableArray *) contentArray

@@ -10,6 +10,18 @@
 
 @implementation GBEmployee
 
+-(id) init{
+    if (self = [super init]){
+        self.dni = @"";
+        self.name = @"";
+        self.surname1 = @"";
+        self.surname2 = @"";
+        self.password = @"";
+        self.isJefe = false;
+    }
+    return self;
+}
+
 -(id) initWithDni: (NSString *) dni
           andName: (NSString *) name
       andSurname1: (NSString *) surname1
