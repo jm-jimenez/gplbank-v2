@@ -37,16 +37,18 @@
 - (IBAction)addNewEmployee:(UIButton *)sender {
     
     GBEmployee *newEmployee = [[GBEmployee alloc] initWithDni:self.tfDNI.text andName:self.tfName.text andSurname1:self.tfSurname1.text andSurname2:self.tfSurname2.text andPassword:self.tfPassword.text andIsJefe:self.switchJefe.on];
-    
-    GBInfo * info = [self.employeesController createEmployee:newEmployee];
-    
-    if (info.success){
-        NSLog(@"OOOLRAAIITT");
-    }
-    else{
-        NSLog(@"fail");
-    }
-    
+
+    int pene = 10;
+    [self.employeesController createEmployee:newEmployee completion:^(GBInfo *info) {
+        if (info.success){
+            NSLog(@"OOOLRAAIITT");
+        }
+        else{
+            NSLog(@"fail");
+        }
+    }];
+    pene = 11;
+  
 }
 
 @end

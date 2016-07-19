@@ -15,5 +15,5 @@
 @interface GBEmployeesDAO : NSObject
 
 -(GBInfo *) createEmployee: (GBEmployee *) newEmployee;
-
+-(void)createEmployee: (GBEmployee *) newEmployee completion: (void (^)(GBInfo* info))block;
 @end

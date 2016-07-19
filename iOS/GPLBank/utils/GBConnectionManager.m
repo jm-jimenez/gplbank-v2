@@ -39,7 +39,8 @@ static GBConnectionManager *instance = nil;
     
     return request;
 }
--(NSDictionary *) callRequest: (NSString *) route andContentArray: (NSMutableArray *) contentArray{
+-(NSDictionary *) callRequest: (NSString *) route
+              andContentArray: (NSMutableArray *) contentArray{
     NSHTTPURLResponse *response;
     NSError *error;
     
@@ -55,6 +56,25 @@ static GBConnectionManager *instance = nil;
     }
     
     return jsonResponse;
+}
+
+-(void) callRequest: (NSString *) route
+              andContentArray: (NSMutableArray *) contentArray
+                 completion:(void (^) (NSDictionary * jsonResponse)) block{
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *miData = [session dataTaskWithRequest:[self buildUrlRequest:route contenJSON:contentArray] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSDictionary *jsonResponse;
+        if ([(NSHTTPURLResponse*)response statusCode] != 200){
+            jsonResponse = nil;
+        }
+        else{
+            jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        }
+        block(jsonResponse);
+    }];
+    
+    [miData resume];
+
 }
 
 @end

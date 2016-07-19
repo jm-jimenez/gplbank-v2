@@ -16,5 +16,6 @@
 -(NSURL *) returnUrlToRoute: (NSString *) route;
 -(NSMutableURLRequest*) buildUrlRequest: (NSString *)route contenJSON:(NSMutableArray *) json;
 -(NSDictionary *) callRequest: (NSString *) route andContentArray: (NSMutableArray *) contentArray;
+-(void) callRequest: (NSString *) route andContentArray: (NSMutableArray *) contentArray completion:(void (^) (NSDictionary * jsonResponse)) block;
 
 @end

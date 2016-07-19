@@ -15,4 +15,11 @@
     return [dao createEmployee: newEmployee];
 }
 
+-(void) createEmployee: (GBEmployee*) newEmployee completion:(void(^) (GBInfo* info))block{
+    GBEmployeesDAO * dao = [[GBEmployeesDAO alloc] init];
+    [dao createEmployee:newEmployee completion:^(GBInfo *info) {
+        block(info);
+    }];
+}
+
 @end
