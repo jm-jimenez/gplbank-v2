@@ -14,6 +14,6 @@
 +(GBParser*) getInstance;
 
 -(NSMutableArray *) employeeToJson:(GBEmployee*) employee;
--(GBEmployee *) employeeFromJson:(NSString*) employee;
+-(GBEmployee *) employeeFromJson:(NSString*) json;
 
 @end

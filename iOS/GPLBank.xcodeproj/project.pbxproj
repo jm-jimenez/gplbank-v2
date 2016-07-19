@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A20633E1D3E675700E893A4 /* GBEmployeeMainMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A20633C1D3E675700E893A4 /* GBEmployeeMainMenuVC.m */; };
+		1A20633F1D3E675700E893A4 /* GBEmployeeMainMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A20633D1D3E675700E893A4 /* GBEmployeeMainMenuVC.xib */; };
+		1A2063431D3E677F00E893A4 /* GBBossMainMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2063411D3E677F00E893A4 /* GBBossMainMenuVC.m */; };
+		1A2063441D3E677F00E893A4 /* GBBossMainMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2063421D3E677F00E893A4 /* GBBossMainMenuVC.xib */; };
 		1AA340561D3CCF5B0081A5BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA340551D3CCF5B0081A5BB /* main.m */; };
 		1AA340591D3CCF5B0081A5BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA340581D3CCF5B0081A5BB /* AppDelegate.m */; };
 		1AA3405F1D3CCF5B0081A5BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AA3405D1D3CCF5B0081A5BB /* Main.storyboard */; };
@@ -41,6 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A20633B1D3E675700E893A4 /* GBEmployeeMainMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBEmployeeMainMenuVC.h; sourceTree = "<group>"; };
+		1A20633C1D3E675700E893A4 /* GBEmployeeMainMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBEmployeeMainMenuVC.m; sourceTree = "<group>"; };
+		1A20633D1D3E675700E893A4 /* GBEmployeeMainMenuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GBEmployeeMainMenuVC.xib; sourceTree = "<group>"; };
+		1A2063401D3E677F00E893A4 /* GBBossMainMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBBossMainMenuVC.h; sourceTree = "<group>"; };
+		1A2063411D3E677F00E893A4 /* GBBossMainMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBBossMainMenuVC.m; sourceTree = "<group>"; };
+		1A2063421D3E677F00E893A4 /* GBBossMainMenuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GBBossMainMenuVC.xib; sourceTree = "<group>"; };
 		1AA340511D3CCF5B0081A5BB /* GPLBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPLBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA340551D3CCF5B0081A5BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1AA340571D3CCF5B0081A5BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -166,6 +176,12 @@
 			children = (
 				1AA3409B1D3CE0FA0081A5BB /* GBLoginVC.h */,
 				1AA3409C1D3CE0FA0081A5BB /* GBLoginVC.m */,
+				1A20633B1D3E675700E893A4 /* GBEmployeeMainMenuVC.h */,
+				1A20633C1D3E675700E893A4 /* GBEmployeeMainMenuVC.m */,
+				1A20633D1D3E675700E893A4 /* GBEmployeeMainMenuVC.xib */,
+				1A2063401D3E677F00E893A4 /* GBBossMainMenuVC.h */,
+				1A2063411D3E677F00E893A4 /* GBBossMainMenuVC.m */,
+				1A2063421D3E677F00E893A4 /* GBBossMainMenuVC.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -314,7 +330,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AA340641D3CCF5B0081A5BB /* LaunchScreen.storyboard in Resources */,
+				1A20633F1D3E675700E893A4 /* GBEmployeeMainMenuVC.xib in Resources */,
 				1AA340611D3CCF5B0081A5BB /* Assets.xcassets in Resources */,
+				1A2063441D3E677F00E893A4 /* GBBossMainMenuVC.xib in Resources */,
 				1AA3405F1D3CCF5B0081A5BB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,12 +361,14 @@
 				1AA340971D3CE08F0081A5BB /* GBParser.m in Sources */,
 				1AA340591D3CCF5B0081A5BB /* AppDelegate.m in Sources */,
 				1AA340561D3CCF5B0081A5BB /* main.m in Sources */,
+				1A20633E1D3E675700E893A4 /* GBEmployeeMainMenuVC.m in Sources */,
 				1AA3409D1D3CE0FA0081A5BB /* GBLoginVC.m in Sources */,
 				1AA340A31D3CE56A0081A5BB /* GBConnectionManager.m in Sources */,
 				1AA340A61D3CE9BB0081A5BB /* GBInfo.m in Sources */,
 				1AA3409A1D3CE0D20081A5BB /* GBEmployeesController.m in Sources */,
 				1AA340A01D3CE1720081A5BB /* GBEmployee.m in Sources */,
 				1AA340931D3CE0220081A5BB /* GBEmployeesDAO.m in Sources */,
+				1A2063431D3E677F00E893A4 /* GBBossMainMenuVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

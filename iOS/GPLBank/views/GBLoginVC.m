@@ -57,10 +57,26 @@
     [self.employeesController authenticateEmployee:employee completion:^(GBInfo *info){
         if (info.success){
             NSLog(@"autentificado");
-            GBEmployee *currentEmployee = [[GBParser getInstance] employeeFromJson:(info.msg)];
+            GBEmployee *currentEmployee = [[GBParser getInstance] employeeFromJson: info.msg];
+            if (currentEmployee.isJefe){
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    GBBossMainMenuVC *bossMenu = [[GBBossMainMenuVC alloc]initWithNibName:@"GBBossMainMenuVC" bundle:nil];
+                    [self.navigationController pushViewController:bossMenu animated:false];
+                    
+                });
+            }
         }
         else{
-            NSLog(@"%@", info.msg);
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"ERROR" message:info.msg preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:@"Aceptar" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [alert dismissViewControllerAnimated:true completion:nil];
+            }]];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self presentViewController:alert animated:true completion:nil];
+            });
+            
         }
     }];
 }
