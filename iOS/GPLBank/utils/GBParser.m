@@ -48,5 +48,26 @@ static GBParser* instance;
     return employee;
 }
 
+-(NSMutableArray *) employeeListFromJson: (NSString *) json{
+    NSData *data = [json dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *parsedData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    NSMutableArray *employeesList = [[NSMutableArray alloc]init];
+    for (NSDictionary *currentEmployee in parsedData) {
+        [employeesList addObject: [self employeeFromDictionary:currentEmployee]];
+    }
+    return employeesList;
+}
+
+-(GBEmployee *) employeeFromDictionary: (NSDictionary*) employeeDict{
+    GBEmployee *employee = [[GBEmployee alloc]init];
+    employee.dni = [employeeDict objectForKey:@"dni"];
+    employee.name = [employeeDict objectForKey:@"name"];
+    employee.surname1 = [employeeDict objectForKey:@"surname1"];
+    employee.surname2 = [employeeDict objectForKey:@"surname2"];
+    employee.password = [employeeDict objectForKey:@"password"];
+    employee.isJefe = [[employeeDict objectForKey:@"isJefe"] boolValue];
+    return employee;
+}
+
 
 @end

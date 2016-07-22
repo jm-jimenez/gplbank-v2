@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GBEmployeesController.h"
+#import "GBEmployeeRow.h"
 
-@interface GBBossMainMenuVC : UIViewController
+@interface GBBossMainMenuVC : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@property GBEmployeesController *employeesController;
+@property NSMutableArray *employees;
 
 @end

@@ -11,6 +11,8 @@
 		1A20633F1D3E675700E893A4 /* GBEmployeeMainMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A20633D1D3E675700E893A4 /* GBEmployeeMainMenuVC.xib */; };
 		1A2063431D3E677F00E893A4 /* GBBossMainMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2063411D3E677F00E893A4 /* GBBossMainMenuVC.m */; };
 		1A2063441D3E677F00E893A4 /* GBBossMainMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2063421D3E677F00E893A4 /* GBBossMainMenuVC.xib */; };
+		1A54E8031D42359200FB9F31 /* GBEmployeeRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A54E8021D42359200FB9F31 /* GBEmployeeRow.xib */; };
+		1A54E8061D42363A00FB9F31 /* GBEmployeeRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A54E8051D42363A00FB9F31 /* GBEmployeeRow.m */; };
 		1AA340561D3CCF5B0081A5BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA340551D3CCF5B0081A5BB /* main.m */; };
 		1AA340591D3CCF5B0081A5BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA340581D3CCF5B0081A5BB /* AppDelegate.m */; };
 		1AA3405F1D3CCF5B0081A5BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AA3405D1D3CCF5B0081A5BB /* Main.storyboard */; };
@@ -51,6 +53,9 @@
 		1A2063401D3E677F00E893A4 /* GBBossMainMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBBossMainMenuVC.h; sourceTree = "<group>"; };
 		1A2063411D3E677F00E893A4 /* GBBossMainMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBBossMainMenuVC.m; sourceTree = "<group>"; };
 		1A2063421D3E677F00E893A4 /* GBBossMainMenuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GBBossMainMenuVC.xib; sourceTree = "<group>"; };
+		1A54E8021D42359200FB9F31 /* GBEmployeeRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GBEmployeeRow.xib; sourceTree = "<group>"; };
+		1A54E8041D42363A00FB9F31 /* GBEmployeeRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBEmployeeRow.h; sourceTree = "<group>"; };
+		1A54E8051D42363A00FB9F31 /* GBEmployeeRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBEmployeeRow.m; sourceTree = "<group>"; };
 		1AA340511D3CCF5B0081A5BB /* GPLBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPLBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA340551D3CCF5B0081A5BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1AA340571D3CCF5B0081A5BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -106,6 +111,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A54E8011D42356500FB9F31 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				1A54E8021D42359200FB9F31 /* GBEmployeeRow.xib */,
+				1A54E8041D42363A00FB9F31 /* GBEmployeeRow.h */,
+				1A54E8051D42363A00FB9F31 /* GBEmployeeRow.m */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		1AA340481D3CCF5B0081A5BB = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +189,7 @@
 		1AA3408A1D3CD6570081A5BB /* views */ = {
 			isa = PBXGroup;
 			children = (
+				1A54E8011D42356500FB9F31 /* components */,
 				1AA3409B1D3CE0FA0081A5BB /* GBLoginVC.h */,
 				1AA3409C1D3CE0FA0081A5BB /* GBLoginVC.m */,
 				1A20633B1D3E675700E893A4 /* GBEmployeeMainMenuVC.h */,
@@ -334,6 +350,7 @@
 				1AA340611D3CCF5B0081A5BB /* Assets.xcassets in Resources */,
 				1A2063441D3E677F00E893A4 /* GBBossMainMenuVC.xib in Resources */,
 				1AA3405F1D3CCF5B0081A5BB /* Main.storyboard in Resources */,
+				1A54E8031D42359200FB9F31 /* GBEmployeeRow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +378,7 @@
 				1AA340971D3CE08F0081A5BB /* GBParser.m in Sources */,
 				1AA340591D3CCF5B0081A5BB /* AppDelegate.m in Sources */,
 				1AA340561D3CCF5B0081A5BB /* main.m in Sources */,
+				1A54E8061D42363A00FB9F31 /* GBEmployeeRow.m in Sources */,
 				1A20633E1D3E675700E893A4 /* GBEmployeeMainMenuVC.m in Sources */,
 				1AA3409D1D3CE0FA0081A5BB /* GBLoginVC.m in Sources */,
 				1AA340A31D3CE56A0081A5BB /* GBConnectionManager.m in Sources */,

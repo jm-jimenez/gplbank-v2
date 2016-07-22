@@ -15,5 +15,5 @@
 
 -(NSMutableArray *) employeeToJson:(GBEmployee*) employee;
 -(GBEmployee *) employeeFromJson:(NSString*) json;
-
+-(NSMutableArray *) employeeListFromJson: (NSString *) json;
 @end

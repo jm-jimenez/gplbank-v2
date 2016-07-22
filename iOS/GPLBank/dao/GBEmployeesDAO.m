@@ -34,7 +34,17 @@
         }
         block(info);
     }];
+}
 
+-(void) getAllEmployees:(void (^)(GBInfo *))block{
+    [[GBConnectionManager getInstance] callRequest:@"getAllEmployees" andContentArray:nil completion:^(NSDictionary *jsonResponse) {
+        GBInfo *info = [[GBInfo alloc] init];
+        if (jsonResponse != nil){
+            info.success = [[jsonResponse objectForKey:@"success"] boolValue];
+            info.msg = [jsonResponse objectForKey:@"msg"];
+        }
+        block(info);
+    }];
 }
 
 @end

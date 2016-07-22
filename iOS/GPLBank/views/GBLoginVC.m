@@ -62,6 +62,7 @@
                 dispatch_async(dispatch_get_main_queue(), ^{
                     
                     GBBossMainMenuVC *bossMenu = [[GBBossMainMenuVC alloc]initWithNibName:@"GBBossMainMenuVC" bundle:nil];
+                    bossMenu.employeesController = self.employeesController;
                     [self.navigationController pushViewController:bossMenu animated:false];
                     
                 });

@@ -15,4 +15,5 @@
 
 -(void) createEmployee: (GBEmployee*) newEmployee completion:(void(^) (GBInfo *info))block;
 -(void)authenticateEmployee:(GBEmployee*)employee completion:(void (^)(GBInfo *info)) block;
+-(void) getAllEmployees: (void (^)(GBInfo *info)) block;
 @end

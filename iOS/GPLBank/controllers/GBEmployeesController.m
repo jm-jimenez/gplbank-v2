@@ -23,4 +23,11 @@
         block(info);
     }];
 }
+
+-(void)getAllEmployees:(void (^)(GBInfo *))block{
+    GBEmployeesDAO *dao = [[GBEmployeesDAO alloc] init];
+    [dao getAllEmployees:^(GBInfo *info) {
+        block(info);
+    }];
+}
 @end
