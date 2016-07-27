@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GBBossMainMenuVC">
             <connections>
+                <outlet property="employeesTable" destination="UBb-0c-Ngc" id="tRp-CX-kwm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,13 +20,30 @@
                     <rect key="frame" x="154" y="184" width="240" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="sectionIndexColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="LwS-0t-bd4"/>
                         <outlet property="delegate" destination="-1" id="pU3-6e-ePP"/>
                     </connections>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="j4q-T7-Dfg">
+                    <rect key="frame" x="176" y="479" width="134" height="42"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.6103362238219896" green="0.6103362238219896" blue="0.6103362238219896" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Delete employee..."/>
+                    <connections>
+                        <action selector="deleteEmployeeActionPerformed:" destination="-1" eventType="touchUpInside" id="wug-Lm-OQQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qda-gN-XwS">
+                    <rect key="frame" x="383" y="479" width="146" height="42"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.61033622379999997" green="0.61033622379999997" blue="0.61033622379999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Add new employee..."/>
+                </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="0.67678192481996668" blue="0.022317516836046325" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <nil key="simulatedBottomBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>

@@ -30,4 +30,11 @@
         block(info);
     }];
 }
+
+-(void) deleteEmployee:(GBEmployee *)toDelete completion:(void (^)(GBInfo *))block{
+    GBEmployeesDAO *dao = [[GBEmployeesDAO alloc] init];
+    [dao deleteEmployee:toDelete completion:^(GBInfo *info) {
+        block(info);
+    }];
+}
 @end

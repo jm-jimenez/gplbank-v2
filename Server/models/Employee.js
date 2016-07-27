@@ -14,7 +14,7 @@ Employee.add({
 	surname1: { type: String, initial: true, required: true},
 	surname2: { type: String, initial: true, required: true},
 	password: { type: Types.Password, initial: true, required: true},
-	isJefe: {type: Types.Boolean, initial: true, required: true}
+	isJefe: {type: Types.Boolean, initial: true}
 });
 
 

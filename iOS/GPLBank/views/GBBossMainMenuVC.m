@@ -47,6 +47,7 @@ static NSString *simpleTableIdentifier = @"SimpleTableItem";
 }
 
 
+
 /*
 #pragma mark - Navigation
 
@@ -57,4 +58,27 @@ static NSString *simpleTableIdentifier = @"SimpleTableItem";
 }
 */
 
+- (IBAction)deleteEmployeeActionPerformed:(UIButton *)sender {
+    GBEmployee *toDelete = [self.employees objectAtIndex: [[self.employeesTable indexPathForSelectedRow] row]];
+    [self.employeesController deleteEmployee: toDelete completion:^(GBInfo *info) {
+        NSString *title;
+        if(info.success){
+            title = @"ÉXITO";
+            [self.employees removeObject:toDelete];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.employeesTable reloadData];
+            });
+        }else{
+            title = @"ERROR";
+        }
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:info.msg preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"Aceptar" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [alert dismissViewControllerAnimated:true completion:nil];
+        }]];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self presentViewController:alert animated:true completion:nil];
+        });
+    }];
+}
 @end

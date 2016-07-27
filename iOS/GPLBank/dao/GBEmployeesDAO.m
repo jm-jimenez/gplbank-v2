@@ -47,4 +47,16 @@
     }];
 }
 
+-(void) deleteEmployee:(GBEmployee *)toDelete completion:(void (^)(GBInfo *))block{
+    NSMutableArray *employeeJson = [[GBParser getInstance] employeeToJson:toDelete];
+    [[GBConnectionManager getInstance] callRequest:@"deleteEmployee" andContentArray:employeeJson completion:^(NSDictionary *jsonResponse) {
+        GBInfo *info = [[GBInfo alloc] init];
+        if(jsonResponse != nil){
+            info.success = [[jsonResponse objectForKey:@"success"] boolValue];
+            info.msg = [jsonResponse objectForKey:@"msg"];
+        }
+        block(info);
+    }];
+}
+
 @end
