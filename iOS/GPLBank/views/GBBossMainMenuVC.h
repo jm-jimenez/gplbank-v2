@@ -15,5 +15,6 @@
 @property NSMutableArray *employees;
 @property (weak, nonatomic) IBOutlet UITableView *employeesTable;
 - (IBAction)deleteEmployeeActionPerformed:(UIButton *)sender;
+- (IBAction)openNewEmployeeForm:(UIButton *)sender;
 
 @end

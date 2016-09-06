@@ -7,6 +7,7 @@
 //
 
 #import "GBBossMainMenuVC.h"
+#import "GBNewEmployeeFormVC.h"
 
 @interface GBBossMainMenuVC ()
 
@@ -80,5 +81,11 @@ static NSString *simpleTableIdentifier = @"SimpleTableItem";
             [self presentViewController:alert animated:true completion:nil];
         });
     }];
+}
+
+- (IBAction)openNewEmployeeForm:(UIButton *)sender {
+    GBNewEmployeeFormVC *form = [[GBNewEmployeeFormVC alloc] init];
+    [[self navigationController] pushViewController:form animated:true];
+    
 }
 @end

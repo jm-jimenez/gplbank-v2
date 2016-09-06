@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A10DEE11D7F1EAC00A910F6 /* GBNewEmployeeFormVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A10DEDF1D7F1EAC00A910F6 /* GBNewEmployeeFormVC.m */; };
+		1A10DEE21D7F1EAC00A910F6 /* GBNewEmployeeFormVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A10DEE01D7F1EAC00A910F6 /* GBNewEmployeeFormVC.xib */; };
 		1A20633E1D3E675700E893A4 /* GBEmployeeMainMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A20633C1D3E675700E893A4 /* GBEmployeeMainMenuVC.m */; };
 		1A20633F1D3E675700E893A4 /* GBEmployeeMainMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A20633D1D3E675700E893A4 /* GBEmployeeMainMenuVC.xib */; };
 		1A2063431D3E677F00E893A4 /* GBBossMainMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2063411D3E677F00E893A4 /* GBBossMainMenuVC.m */; };
@@ -47,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A10DEDE1D7F1EAC00A910F6 /* GBNewEmployeeFormVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBNewEmployeeFormVC.h; sourceTree = "<group>"; };
+		1A10DEDF1D7F1EAC00A910F6 /* GBNewEmployeeFormVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBNewEmployeeFormVC.m; sourceTree = "<group>"; };
+		1A10DEE01D7F1EAC00A910F6 /* GBNewEmployeeFormVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GBNewEmployeeFormVC.xib; sourceTree = "<group>"; };
 		1A20633B1D3E675700E893A4 /* GBEmployeeMainMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBEmployeeMainMenuVC.h; sourceTree = "<group>"; };
 		1A20633C1D3E675700E893A4 /* GBEmployeeMainMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBEmployeeMainMenuVC.m; sourceTree = "<group>"; };
 		1A20633D1D3E675700E893A4 /* GBEmployeeMainMenuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GBEmployeeMainMenuVC.xib; sourceTree = "<group>"; };
@@ -117,6 +122,9 @@
 				1A54E8021D42359200FB9F31 /* GBEmployeeRow.xib */,
 				1A54E8041D42363A00FB9F31 /* GBEmployeeRow.h */,
 				1A54E8051D42363A00FB9F31 /* GBEmployeeRow.m */,
+				1A10DEDE1D7F1EAC00A910F6 /* GBNewEmployeeFormVC.h */,
+				1A10DEDF1D7F1EAC00A910F6 /* GBNewEmployeeFormVC.m */,
+				1A10DEE01D7F1EAC00A910F6 /* GBNewEmployeeFormVC.xib */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -309,6 +317,7 @@
 				TargetAttributes = {
 					1AA340501D3CCF5B0081A5BB = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = FXJFSC2G77;
 					};
 					1AA340691D3CCF5B0081A5BB = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -346,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AA340641D3CCF5B0081A5BB /* LaunchScreen.storyboard in Resources */,
+				1A10DEE21D7F1EAC00A910F6 /* GBNewEmployeeFormVC.xib in Resources */,
 				1A20633F1D3E675700E893A4 /* GBEmployeeMainMenuVC.xib in Resources */,
 				1AA340611D3CCF5B0081A5BB /* Assets.xcassets in Resources */,
 				1A2063441D3E677F00E893A4 /* GBBossMainMenuVC.xib in Resources */,
@@ -382,6 +392,7 @@
 				1A20633E1D3E675700E893A4 /* GBEmployeeMainMenuVC.m in Sources */,
 				1AA3409D1D3CE0FA0081A5BB /* GBLoginVC.m in Sources */,
 				1AA340A31D3CE56A0081A5BB /* GBConnectionManager.m in Sources */,
+				1A10DEE11D7F1EAC00A910F6 /* GBNewEmployeeFormVC.m in Sources */,
 				1AA340A61D3CE9BB0081A5BB /* GBInfo.m in Sources */,
 				1AA3409A1D3CE0D20081A5BB /* GBEmployeesController.m in Sources */,
 				1AA340A01D3CE1720081A5BB /* GBEmployee.m in Sources */,
@@ -529,8 +540,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GPLBank/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.GPLBank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -541,8 +553,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GPLBank/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.GPLBank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
