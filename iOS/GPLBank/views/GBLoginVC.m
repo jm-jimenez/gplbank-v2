@@ -16,7 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.employeesController = [[GBEmployeesController alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,19 +33,6 @@
 }
 */
 
-- (IBAction)addNewEmployee:(UIButton *)sender {
-    
-    GBEmployee *newEmployee = [[GBEmployee alloc] initWithDni:self.tfDNI.text andName:self.tfName.text andSurname1:self.tfSurname1.text andSurname2:self.tfSurname2.text andPassword:self.tfPassword.text andIsJefe:self.switchJefe.on];
-
-    [self.employeesController createEmployee:newEmployee completion:^(GBInfo *info) {
-        if (info.success){
-            NSLog(@"OOOLRAAIITT");
-        }
-        else{
-            NSLog(@"fail");
-        }
-    }];
-}
 
 - (IBAction)authenticateEmployee:(UIButton *)sender {
     
@@ -54,7 +40,7 @@
     employee.dni = self.tfDNI.text;
     employee.password = self.tfPassword.text;
     
-    [self.employeesController authenticateEmployee:employee completion:^(GBInfo *info){
+    [[GBEmployeesController getInstance] authenticateEmployee:employee completion:^(GBInfo *info){
         if (info.success){
             NSLog(@"autentificado");
             GBEmployee *currentEmployee = [[GBParser getInstance] employeeFromJson: info.msg];
@@ -62,7 +48,6 @@
                 dispatch_async(dispatch_get_main_queue(), ^{
                     
                     GBBossMainMenuVC *bossMenu = [[GBBossMainMenuVC alloc]initWithNibName:@"GBBossMainMenuVC" bundle:nil];
-                    bossMenu.employeesController = self.employeesController;
                     [self.navigationController pushViewController:bossMenu animated:false];
                     
                 });

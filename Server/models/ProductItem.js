@@ -2,7 +2,7 @@ var keystone = require('keystone');
 var Types = keystone.Field.Types;
 var mongoose = require ("mongoose");
 /**
- * Employee Model
+ * ProductItem Model
  * ==========
  */
 

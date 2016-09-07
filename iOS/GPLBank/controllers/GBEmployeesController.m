@@ -10,6 +10,16 @@
 
 @implementation GBEmployeesController
 
+static GBEmployeesController *instance;
+
++(GBEmployeesController *) getInstance{
+    if (instance == nil){
+        instance = [[GBEmployeesController alloc]init];
+    }
+    
+    return instance;
+}
+
 -(void) createEmployee: (GBEmployee*) newEmployee completion:(void(^) (GBInfo* info))block{
     GBEmployeesDAO * dao = [[GBEmployeesDAO alloc] init];
     [dao createEmployee:newEmployee completion:^(GBInfo *info) {

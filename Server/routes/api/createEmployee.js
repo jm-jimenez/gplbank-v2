@@ -11,7 +11,7 @@ exports = module.exports = function(req, res) {
 			name : incomingEmployee.name,
 			surname1 : incomingEmployee.surname1,
 			surname2 : incomingEmployee.surname2,
-			password : incomingEmployee.password,
+			password : "provisional",
 			isJefe : incomingEmployee.isJefe
 		});
 

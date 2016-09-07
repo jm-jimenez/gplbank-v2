@@ -14,16 +14,9 @@
 
 @interface GBLoginVC : UIViewController
 
-@property GBEmployeesController * employeesController;
-
 @property (weak, nonatomic) IBOutlet UITextField *tfDNI;
-@property (weak, nonatomic) IBOutlet UITextField *tfName;
-@property (weak, nonatomic) IBOutlet UITextField *tfSurname1;
-@property (weak, nonatomic) IBOutlet UITextField *tfSurname2;
 @property (weak, nonatomic) IBOutlet UITextField *tfPassword;
-@property (weak, nonatomic) IBOutlet UISwitch *switchJefe;
 
-- (IBAction)addNewEmployee:(UIButton *)sender;
 - (IBAction)authenticateEmployee:(UIButton *)sender;
 
 @end

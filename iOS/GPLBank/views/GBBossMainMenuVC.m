@@ -19,7 +19,7 @@ static NSString *simpleTableIdentifier = @"SimpleTableItem";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.employeesController getAllEmployees:^(GBInfo *info) {
+    [[GBEmployeesController getInstance] getAllEmployees:^(GBInfo *info) {
         self.employees = [[GBParser getInstance] employeeListFromJson:info.msg];
     }];
 }
@@ -61,7 +61,7 @@ static NSString *simpleTableIdentifier = @"SimpleTableItem";
 
 - (IBAction)deleteEmployeeActionPerformed:(UIButton *)sender {
     GBEmployee *toDelete = [self.employees objectAtIndex: [[self.employeesTable indexPathForSelectedRow] row]];
-    [self.employeesController deleteEmployee: toDelete completion:^(GBInfo *info) {
+    [[GBEmployeesController getInstance] deleteEmployee: toDelete completion:^(GBInfo *info) {
         NSString *title;
         if(info.success){
             title = @"ÉXITO";

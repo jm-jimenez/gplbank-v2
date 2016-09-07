@@ -11,7 +11,6 @@
 #import "GBEmployeeRow.h"
 
 @interface GBBossMainMenuVC : UIViewController <UITableViewDelegate, UITableViewDataSource>
-@property GBEmployeesController *employeesController;
 @property NSMutableArray *employees;
 @property (weak, nonatomic) IBOutlet UITableView *employeesTable;
 - (IBAction)deleteEmployeeActionPerformed:(UIButton *)sender;

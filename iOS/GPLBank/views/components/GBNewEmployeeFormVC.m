@@ -8,6 +8,7 @@
 
 #import "GBNewEmployeeFormVC.h"
 #import "GBEmployee.h"
+#import "GBEmployeesController.h"
 
 @interface GBNewEmployeeFormVC ()
 
@@ -50,6 +51,23 @@
     toAdd.surname1 = self.surname1.text;
     toAdd.surname2 = self.surname2.text;
     toAdd.isJefe = [self.isJefe isOn];
+    
+    [[GBEmployeesController getInstance] createEmployee:toAdd completion:^(GBInfo *info) {
+        
+        if (info.success){
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"AÑADIDO" message:info.msg preferredStyle:UIAlertControllerStyleAlert];
+            
+            [alert addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [alert dismissViewControllerAnimated:true completion:nil];
+                [self.navigationController popViewControllerAnimated:true];
+            }]];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self presentViewController:alert animated:true completion:nil];
+            });
+        }
+    }];
+    
     
     
 }
