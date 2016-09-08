@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "GBEmployee.h"
+#import "GBClient.h"
 
 @interface GBParser : NSObject
 
@@ -16,4 +17,7 @@
 -(NSMutableArray *) employeeToJson:(GBEmployee*) employee;
 -(GBEmployee *) employeeFromJson:(NSString*) json;
 -(NSMutableArray *) employeeListFromJson: (NSString *) json;
+
+-(GBClient *) clientFromJson: (NSString *)json;
+
 @end

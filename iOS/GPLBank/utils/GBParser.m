@@ -69,5 +69,19 @@ static GBParser* instance;
     return employee;
 }
 
+-(GBClient *) clientFromJson: (NSString *) json{
+    NSData *data = [json dataUsingEncoding: NSUTF8StringEncoding];
+    NSDictionary *parsedData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    
+    GBClient *client = [[GBClient alloc] init];
+    
+    client.dni = [parsedData objectForKey:@"dni"];
+    client.name = [parsedData objectForKey:@"name"];
+    client.surname1 = [parsedData objectForKey:@"surname1"];
+    client.surname2 = [parsedData objectForKey:@"surname2"];
+    
+    
+    return client;
+}
 
 @end

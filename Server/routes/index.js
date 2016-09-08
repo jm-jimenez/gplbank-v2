@@ -42,6 +42,8 @@ exports = module.exports = function(app) {
 	app.all("/authenticateEmployee", routes.api.authenticateEmployee);
 	app.all("/getAllEmployees", routes.api.getAllEmployees);
 	app.all("/deleteEmployee", routes.api.deleteEmployee);
+        
+        app.all("/searchClient", routes.api.searchClient);
 	
 	
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:

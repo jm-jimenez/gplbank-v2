@@ -34,4 +34,16 @@
 }
 */
 
+- (IBAction)searchClient:(UIButton *)sender {
+    
+    [[GBClientsController getInstance] searchClientWithDni:self.dniField.text completion:^(GBInfo *info) {
+        if (info.success){
+            GBClient *client = [[GBParser getInstance] clientFromJson:info.msg];
+            NSLog(@"%@", client);
+
+        }
+    }];
+    
+    
+}
 @end

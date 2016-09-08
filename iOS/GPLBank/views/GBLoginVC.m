@@ -7,6 +7,7 @@
 //
 
 #import "GBLoginVC.h"
+#import "GBEmployeeMainMenuVC.h"
 
 @interface GBLoginVC ()
 
@@ -48,9 +49,17 @@
                 dispatch_async(dispatch_get_main_queue(), ^{
                     
                     GBBossMainMenuVC *bossMenu = [[GBBossMainMenuVC alloc]initWithNibName:@"GBBossMainMenuVC" bundle:nil];
-                    [self.navigationController pushViewController:bossMenu animated:false];
+                    [self.navigationController pushViewController:bossMenu animated:true];
                     
                 });
+            }
+            
+            else{
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    GBEmployeeMainMenuVC *employeeMenu = [[GBEmployeeMainMenuVC alloc]init];
+                    [self.navigationController pushViewController:employeeMenu animated:true];
+                });
+                
             }
         }
         else{

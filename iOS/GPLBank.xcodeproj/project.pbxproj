@@ -15,6 +15,9 @@
 		1A2063441D3E677F00E893A4 /* GBBossMainMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2063421D3E677F00E893A4 /* GBBossMainMenuVC.xib */; };
 		1A54E8031D42359200FB9F31 /* GBEmployeeRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A54E8021D42359200FB9F31 /* GBEmployeeRow.xib */; };
 		1A54E8061D42363A00FB9F31 /* GBEmployeeRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A54E8051D42363A00FB9F31 /* GBEmployeeRow.m */; };
+		1A9F582B1D815E9700A9D43D /* GBClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F582A1D815E9700A9D43D /* GBClient.m */; };
+		1A9F582E1D8168BA00A9D43D /* GBClientsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F582D1D8168BA00A9D43D /* GBClientsController.m */; };
+		1A9F58311D816D8900A9D43D /* GBClientsDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F58301D816D8900A9D43D /* GBClientsDAO.m */; };
 		1AA340561D3CCF5B0081A5BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA340551D3CCF5B0081A5BB /* main.m */; };
 		1AA340591D3CCF5B0081A5BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA340581D3CCF5B0081A5BB /* AppDelegate.m */; };
 		1AA3405F1D3CCF5B0081A5BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AA3405D1D3CCF5B0081A5BB /* Main.storyboard */; };
@@ -61,6 +64,12 @@
 		1A54E8021D42359200FB9F31 /* GBEmployeeRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GBEmployeeRow.xib; sourceTree = "<group>"; };
 		1A54E8041D42363A00FB9F31 /* GBEmployeeRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBEmployeeRow.h; sourceTree = "<group>"; };
 		1A54E8051D42363A00FB9F31 /* GBEmployeeRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBEmployeeRow.m; sourceTree = "<group>"; };
+		1A9F58291D815E9700A9D43D /* GBClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBClient.h; sourceTree = "<group>"; };
+		1A9F582A1D815E9700A9D43D /* GBClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBClient.m; sourceTree = "<group>"; };
+		1A9F582C1D8168BA00A9D43D /* GBClientsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBClientsController.h; sourceTree = "<group>"; };
+		1A9F582D1D8168BA00A9D43D /* GBClientsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBClientsController.m; sourceTree = "<group>"; };
+		1A9F582F1D816D8900A9D43D /* GBClientsDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBClientsDAO.h; sourceTree = "<group>"; };
+		1A9F58301D816D8900A9D43D /* GBClientsDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBClientsDAO.m; sourceTree = "<group>"; };
 		1AA340511D3CCF5B0081A5BB /* GPLBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPLBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA340551D3CCF5B0081A5BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1AA340571D3CCF5B0081A5BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -215,6 +224,8 @@
 			children = (
 				1AA3409E1D3CE1720081A5BB /* GBEmployee.h */,
 				1AA3409F1D3CE1720081A5BB /* GBEmployee.m */,
+				1A9F58291D815E9700A9D43D /* GBClient.h */,
+				1A9F582A1D815E9700A9D43D /* GBClient.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -224,6 +235,8 @@
 			children = (
 				1AA340981D3CE0D20081A5BB /* GBEmployeesController.h */,
 				1AA340991D3CE0D20081A5BB /* GBEmployeesController.m */,
+				1A9F582C1D8168BA00A9D43D /* GBClientsController.h */,
+				1A9F582D1D8168BA00A9D43D /* GBClientsController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -233,6 +246,8 @@
 			children = (
 				1AA340911D3CE0220081A5BB /* GBEmployeesDAO.h */,
 				1AA340921D3CE0220081A5BB /* GBEmployeesDAO.m */,
+				1A9F582F1D816D8900A9D43D /* GBClientsDAO.h */,
+				1A9F58301D816D8900A9D43D /* GBClientsDAO.m */,
 			);
 			path = dao;
 			sourceTree = "<group>";
@@ -390,13 +405,16 @@
 				1AA340561D3CCF5B0081A5BB /* main.m in Sources */,
 				1A54E8061D42363A00FB9F31 /* GBEmployeeRow.m in Sources */,
 				1A20633E1D3E675700E893A4 /* GBEmployeeMainMenuVC.m in Sources */,
+				1A9F582B1D815E9700A9D43D /* GBClient.m in Sources */,
 				1AA3409D1D3CE0FA0081A5BB /* GBLoginVC.m in Sources */,
 				1AA340A31D3CE56A0081A5BB /* GBConnectionManager.m in Sources */,
+				1A9F58311D816D8900A9D43D /* GBClientsDAO.m in Sources */,
 				1A10DEE11D7F1EAC00A910F6 /* GBNewEmployeeFormVC.m in Sources */,
 				1AA340A61D3CE9BB0081A5BB /* GBInfo.m in Sources */,
 				1AA3409A1D3CE0D20081A5BB /* GBEmployeesController.m in Sources */,
 				1AA340A01D3CE1720081A5BB /* GBEmployee.m in Sources */,
 				1AA340931D3CE0220081A5BB /* GBEmployeesDAO.m in Sources */,
+				1A9F582E1D8168BA00A9D43D /* GBClientsController.m in Sources */,
 				1A2063431D3E677F00E893A4 /* GBBossMainMenuVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

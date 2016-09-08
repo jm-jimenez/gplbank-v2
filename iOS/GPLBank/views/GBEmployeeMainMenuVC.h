@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GBClientsController.h"
+#import "GBClient.h"
+#import "GBParser.h"
 
 @interface GBEmployeeMainMenuVC : UIViewController
+
+@property (weak, nonatomic) IBOutlet UITextField *dniField;
+- (IBAction)searchClient:(UIButton *)sender;
 
 @end
